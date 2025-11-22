@@ -28,3 +28,24 @@ function square1(n: CleanNumber){
 console.log(square1(4));
 console.log(square1(3));
 
+
+type A = Awaited<Promise<number>>; 
+// A = number
+type B = Awaited<Promise<string>>;
+// B = string
+type C = Awaited<Promise<Promise<boolean>>>;
+// C = boolean
+
+
+
+async function getUser() {
+  return { id: 1, name: "Sohel" };
+}
+
+type Async_User = Awaited<ReturnType<typeof getUser>>;
+// User = { id: number; name: string; }
+
+console.log(getUser());
+
+
+

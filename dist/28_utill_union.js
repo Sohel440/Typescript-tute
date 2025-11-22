@@ -14,3 +14,9 @@ function square1(n) {
 ;
 console.log(square1(4));
 console.log(square1(3));
+// C = boolean
+async function getUser() {
+    return { id: 1, name: "Sohel" };
+}
+// User = { id: number; name: string; }
+console.log(getUser());
